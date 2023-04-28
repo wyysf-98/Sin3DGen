@@ -8,7 +8,7 @@
 
 
 <p align="center">
-  <img width="80%" src="https://wyysf-98.github.io/Sin3DGen/assets/videos/high-quality.mp4"/>
+  <img src="https://wyysf-98.github.io/Sin3DGen/assets/images/teaser_bak.png"/>
 </p>
 
 <p align="center"> We are working on releasing the code... (Maybe in mid or late May)🏗️ 🚧 🔨</p>
