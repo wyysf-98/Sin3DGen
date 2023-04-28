@@ -9,6 +9,7 @@
 
 <p align="center">
   <img src="https://wyysf-98.github.io/Sin3DGen/assets/images/teaser_bak.png"/>
+  <p align="center">High-quality 3D scenes created by our method (background sky post-added)</p>
 </p>
 
 <p align="center"> We are working on releasing the code... (Maybe in mid or late May)🏗️ 🚧 🔨</p>
