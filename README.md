@@ -51,7 +51,7 @@ pip install -r docker/requirements.txt
 
 <details> <summary>Data preparation</summary>
 
-We provide some Plenoxels scenes and optimized mapping fields in [link]() for a quick test. Please download and unzip to current folder. Then the folder should as following:
+We provide some Plenoxels scenes and optimized mapping fields in [link](https://drive.google.com/drive/folders/1RXxQSWpegW9exK721vpeLuS6c5oy8Wv7) for a quick test. Please download and unzip to current folder. Then the folder should as following:
 
 ```
 └── data
