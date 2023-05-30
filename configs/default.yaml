@@ -1,0 +1,38 @@
+output: "./outputs/default"
+
+## Default synthesis config
+pyr_reso:                   # List of grid resolution for each pyramid level
+  [ 16, 21, 28, 38, 51, 68, 91, 121, 162, 216]
+rescale_bounds:             # Enlarge the bouding box of mesg for synthesising
+  [ 1.0, 1.0, 1.0]   # X / Y / Z axis
+rewrite_bounds: null        # User pre-defined the bouding box for synthesising, eg: [1.0, 1.0, 1.0]   # X / Y / Z axis
+jitter_once: True           # Whether to jitter the input once
+noise_type: "gaussian"      # Noise type
+noise: 0.50                 # Noise level for jittering
+
+## Scene config
+geo_feat_type: "tsdf"       # Geometry feature type
+truncate_scale: 3           # Truncate sdf to scale*voxel_size, used when geo_feat_type=="tsdf"
+app_feat_type: "pca"        # Appearance feature type
+n_components: 3             # Number of PCA components for appearance, used when app_feat_type=="pca"
+w_app: 0.50                 # Weight for appearance
+
+## NN search config
+alpha: 0.01                 # Alpha for completeness/diversity tradeoff
+patch_size: 5               # Patch size
+coarse_iters: 10            # Number of iterations for the coarsest level
+## Exact-to-approximate NN search
+ENNF_iters: 10              # Number of iterations for exact NN search 
+Coord_iters: 1              # Number of iterations for Coordinate-based search in exact NN search 
+start_ANNF_level: 5         # Start level of approximate NN search
+ANNF_iters: 1               # Number of iterations for approximate NN search 
+PM_iters: 2                 # Number of iterations for PatchMatch search in approximate NN search 
+
+## Visualization config
+start_vis_level: 3          # Whether to only visulize voxels near mesh surface
+scene_reso: "[512, 512, 512]"
+trajectory: "./utils/trajectories/circle_n20_r3.0_e-30_1024.json"
+fps: 8                      # Frames per second for video
+vis_mapping_field: True     # Whether to visualize the optimized mapping field 
+only_vis_surface: True      # Whether to only visulize voxels near mesh surface
+sdf_thres: 0.00             # SDF threshold for voxel visualization, used when only_vis_surface==True
